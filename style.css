@@ -362,7 +362,8 @@ a {
     justify-self: center;
     width: 40%;
     height: 60vh;
-    margin-top: 5%;
+    margin-top: 10%;
+
 }
 
 .conteudo-habilidade {
@@ -374,12 +375,21 @@ a {
     font-size: 1.8rem;
     vertical-align: center;
 }
-.linguagem {display: flex;
-gap: 10%;
-padding-top: 2%;
- font-size: 1.5rem;}
 
-.linguagem i{opacity: 0;
-transition: ease 0.5s;}
+.linguagem {
+    display: flex;
+    gap: 10%;
+    padding-top: 2%;
+    font-size: 1.5rem;
+}
 
-.linguagem:hover i{opacity: 1;}
+.linguagem img {
+    opacity: 0;
+    width: 100%;
+    height: 18%;
+    transition: ease 0.5s;
+}
+
+.linguagem:hover img {
+    opacity: 1;
+}
