@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --cor-principal: #1C2529;
+    --cor-segundaria: #A1D1B1;
+    --branco: white;
+}
+
+body {
+    background-color: var(--cor-principal);
+    color: var(--branco);
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    justify-self: center;
+    background-color: rgba(var(--cor-principal), 0.1);
+    border-radius: 15px;
+    margin-top: 1%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    z-index: 999;
+
+}
+
+ul {
+    list-style: none;
+    margin-top: 1%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+li {
+    justify-self: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+#Inicio {
+    width: 100%;
+    height: 105vh;
+    position: relative;
+
+}
+
+
+#EscritoInicio {
+    padding-top: 21%;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    display: flex;
+    gap: 2%;
+
+}
+
+#linha {
+    width: 0.7%;
+    height: 20vh;
+    border-radius: 10px;
+    background-color: var(--cor-segundaria);
+}
+
+.txtinicio {
+    font-size: 3rem;
+    width: 20%;
+    text-align: center;
+    padding: 0;
+}
+
+#dev {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#dev::before {
+    content: "";
+    color: var(--branco);
+    animation: escrito 18s infinite;
+}
+
+#dev::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid var(--cor-segundaria);
+    right: -4px;
+    animation: cursor 1s infinite, digita 30s steps(20) infinite;
+    width: calc(80% + 10px);
+    background-color: var(--cor-principal);
+
+}
+
+@keyframes digita {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 10px);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid var(--cor-principal);
+
+    }
+
+
+}
+
+@keyframes escrito {
+
+    0%,
+    33% {
+        content: "Web";
+    }
+
+    34%,
+    67% {
+        content: "Back-End";
+    }
+
+    68%,
+    100% {
+        content: "Front-End";
+    }
+}
+
+#circulo {
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    z-index: 2;
+
+    margin-left: 50%;
+    margin-top: 30%;
+}
+
+#area-circulo {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+}
+
+#Bolinha {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: .5;
+    background-color: gray;
+    box-shadow: 0 0 8px gray;
+}
+
+.girar-3d {
+    width: 1200px;
+    height: 950px;
+    background: transparent;
+    border: 1px solid var(--cor-segundaria);
+    border-radius: 50%;
+    will-change: transform;
+    animation: girar3d 6s linear infinite;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateX(60deg) rotate(0deg);
+}
+
+
+@keyframes girar3d {
+    from {
+        transform: translate(-50%, -50%) rotateX(60deg) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotateX(60deg) rotate(1turn);
+    }
+}
+
+.container2 {
+    position: absolute;
+
+}
+
+
+.girar-3d2 {
+    width: 1200px;
+    height: 950px;
+    border: 1px solid var(--cor-segundaria);
+    border-radius: 50%;
+    animation: girar3d2 8s linear infinite;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+
+
+@keyframes girar3d2 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.container3 {
+    position: absolute;
+}
+
+
+.girar-3d3 {
+    width: 1200px;
+    height: 950px;
+    border: 1px solid var(--cor-segundaria);
+    border-radius: 50%;
+    animation: girar3d3 10s linear infinite;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateY(60deg) rotate(0deg);
+    backface-visibility: hidden;
+}
+
+
+@keyframes girar3d3 {
+    from {
+        transform: translate(-50%, -50%) rotateY(60deg) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotateY(60deg) rotate(1turn);
+
+    }
+}
+
+#sobremim {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--cor-principal)
+}
+
+/* sobremim */
+
+.divisoria {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    position: relative;
+}
+
+.divisoria h1 {
+    align-self: center;
+
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--cor-segundaria);
+
+}
+
+.divisoria h2 {
+    text-transform: uppercase;
+    align-self: center;
+    font-size: 10rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.1);
+    /* Cor muito suave para o fundo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    /* Coloca o texto de fundo atrás */
+}
+
+#area-sobremim {
+    display: flex;
+    margin-top: 5%;
+    width: 80%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-self: center;
+
+}
+
+#foto-sobremim {
+    background-color: gray;
+    width: 40%;
+    height: 70vh;
+}
+
+#txt-sobremim {
+    align-content: center;
+    height: 70vh;
+    width: 45%;
+    text-align: left;
+}
+
+#txt-sobremim p {
+    text-align: justify;
+    font-size: 2.0em;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#habilidades {
+    padding-top: 5%;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--cor-principal)
+}
+
+#area-habilidades {
+    flex-direction: column;
+    display: flex;
+    justify-self: center;
+    width: 40%;
+    height: 60vh;
+    margin-top: 5%;
+}
+
+.conteudo-habilidade {
+    width: 60%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    font-size: 1.8rem;
+    vertical-align: center;
+}
+.linguagem {display: flex;
+gap: 10%;
+padding-top: 2%;
+ font-size: 1.5rem;}
+
+.linguagem i{opacity: 0;
+transition: ease 0.5s;}
+
+.linguagem:hover i{opacity: 1;}
