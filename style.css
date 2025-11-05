@@ -452,6 +452,12 @@ color: var(--cor-primaria);}
     fill: var(--accent);
     height: 3.5vh;
 }
+#ferramentas{
+  fill: none;
+  stroke: var(--accent);
+  height: 3.5vh;
+
+}
 
 .linguagem {
     height: 5vh;
