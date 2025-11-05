@@ -6,13 +6,17 @@
 }
 
 :root {
-    --cor-principal: #1C2529;
-    --cor-segundaria: #A1D1B1;
-    --branco: white;
+
+    --branco: #f8e2e6;
+    --background: #100407;
+    --cor-primaria: #e2839e;
+    --cor-segundaria: #718c0f;
+    --accent: #6dd241;
+
 }
 
 body {
-    background-color: var(--cor-principal);
+    background-color: var(--background);
     color: var(--branco);
 
 }
@@ -105,7 +109,7 @@ a {
     right: -4px;
     animation: cursor 1s infinite, digita 30s steps(20) infinite;
     width: calc(80% + 10px);
-    background-color: var(--cor-principal);
+    background-color: var(--background);
 
 }
 
@@ -280,7 +284,7 @@ a {
 #sobremim {
     height: 100vh;
     width: 100%;
-    background-color: var(--cor-principal)
+    background-color: var(--background)
 }
 
 /* sobremim */
@@ -299,7 +303,7 @@ a {
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    color: var(--cor-segundaria);
+    color: var(--accent);
 
 }
 
@@ -353,40 +357,62 @@ a {
     padding-top: 5%;
     height: 100vh;
     width: 100%;
-    background-color: var(--cor-principal)
+    background-color: var(--background)
 }
 
 #area-habilidades {
     flex-direction: column;
     display: flex;
     justify-self: center;
-    width: 40%;
+    width: 65%;
     height: 60vh;
     margin-top: 10%;
-
 }
 
 .conteudo-habilidade {
-    width: 60%;
+    overflow: hidden;
+    padding: 5%;
+    width: 100%;
     height: 20vh;
     display: flex;
     flex-direction: row;
-    gap: 15%;
+    gap: 5%;
     font-size: 1.8rem;
     vertical-align: center;
+    background-color: rgba(var(--cor-principal), 0.1);
+    border-radius: 15px;
+    margin-top: 1%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
 }
 
 .linguagem {
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    gap: 10%;
-    padding-top: 2%;
-    font-size: 1.5rem;
+    width: auto ;
+    padding: 1%;
+    font-size: 0.7rem;
+    background-color: rgba(var(--cor-principal), 0.1);
+    border-radius: 10px;
+    margin-top: 1%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 5%;
+}
+
+.linguagem h2 {
+  justify-self: center;
 }
 
 .linguagem img {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
-    height: 18%;
+    height: 3vh;
     transition: ease 0.5s;
 }
 
