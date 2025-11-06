@@ -8,12 +8,11 @@
 
 :root {
 
-    --branco: #f8e2e6;
-    --background: #100407;
-    --cor-primaria: #455cc0;
-    --cor-segundaria: #718c0f;
-    --accent: #6dd241;
-    --cinza: #000000;
+   --branco: #ecebef;
+--background: #020d0c;
+--cor-primaria: #f5c000;;
+--cor-segundaria: #f5c000;;
+--accent: #ed630c;
 }
 
 body {
@@ -476,7 +475,7 @@ a {
     padding: 1%;
     font-size: 0.7rem;
     border-radius: 10px;
-    border: 1px solid var(--accent);
+    border: 1px solid var(--cor-segundaria);
     gap: 5%;
 }
 
@@ -507,12 +506,11 @@ a {
     overflow: hidden;
     display: grid;
     align-items: center;
+    position: relative;
 }
 
 /* CARROSEL */
 :root {
-
-
     --glow-primary: 0 rgb(254, 254, 254)rgba(157, 0, 255, 0.7),
         0 0 20px rgba(255, 255, 255, 0.5);
     --glow-secondary: 0 0 10px rgba(0, 229, 255, 0.7),
@@ -527,21 +525,9 @@ a {
 
 
 
-.title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-segundaria));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
-    animation: pulse 3s infinite alternate;
-}
-
-
 
 /* Carousel Container */
-.carousel-container {
+.area-carrossel {
     position: relative;
     width: 100%;
     height: 500px;
@@ -554,7 +540,7 @@ a {
     /* Prevent default touch actions */
 }
 
-.carousel {
+.carrossel {
     position: relative;
     width: var(--carousel-radius);
     height: var(--carousel-radius);
@@ -562,8 +548,8 @@ a {
     transition: transform 0.5s ease;
 }
 
-/* Memory Cards */
-.memory-card {
+/* Cartões */
+.card {
     position: absolute;
     width: var(--card-width);
     height: var(--card-height);
@@ -576,7 +562,7 @@ a {
     cursor: pointer;
 }
 
-.card-inner {
+.card-interno {
     position: relative;
     width: 100%;
     height: 100%;
@@ -584,16 +570,16 @@ a {
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.memory-card:hover .card-inner {
+.card:hover .card-interno{
     transform: translateZ(20px);
 }
 
-.memory-card.flipped .card-inner {
+.card.flipped .card-interno {
     transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
+.card-frente,
+.card-tras {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -603,23 +589,23 @@ a {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.card-front {
+.card-frente {
     background: linear-gradient(135deg,
-            var(--cor-primaria),
+            var(--accent),
             rgba(20, 20, 40, 0.9));
     border: 1px solid rgba(157, 0, 255, 0.3);
     transform-style: preserve-3d;
 }
 
-.card-back {
+.card-tras{
     background: linear-gradient(135deg,
-            var(--cor-primaria),
+            var(--accent),
             rgba(30, 30, 60, 0.8));
     border: 1px solid rgba(0, 229, 255, 0.3);
     transform: rotateY(180deg);
 }
 
-.card-content {
+.card-conteudo {
     padding: 20px;
     height: 100%;
     display: flex;
@@ -627,22 +613,21 @@ a {
     position: relative;
 }
 
-.memory-date {
-    font-family: "Orbitron", sans-serif;
+.tecnologia{
     font-size: 0.8rem;
-    color: var(--accent);
+    color: var(--branco);
     margin-bottom: 10px;
-    text-shadow: 0 0 5px rgba(255, 0, 229, 0.7);
+    text-shadow: 0 0 5px rgba(251, 84, 0, 0.7);
 }
 
-.memory-card h3 {
+.card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--branco);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.memory-image {
+.projeto-img {
     width: 100%;
     height: 150px;
     margin-bottom: 15px;
@@ -652,18 +637,13 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.3);
+
+    background-size: contain;
+    background-position: center;
 }
 
-.memory-image i {
-    color: var(--cor-primaria);
-    font-size: 4rem;
-    text-shadow: var(--glow-primary);
-    animation: pulse 3s infinite alternate;
-    z-index: 2;
-}
 
-.glitch-effect {
+.glitch-efeito {
     position: absolute;
     top: 0;
     left: 0;
@@ -671,7 +651,7 @@ a {
     height: 100%;
     background: linear-gradient(45deg,
             transparent 65%,
-            var(--cor-primaria) 70%,
+            var(--branco) 70%,
             transparent 75%);
     background-size: 200% 200%;
     animation: glitch 3s linear infinite;
@@ -700,14 +680,14 @@ a {
     }
 }
 
-.memory-preview {
+.resumo{
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-bottom: 15px;
     flex-grow: 1;
 }
 
-.card-back .card-content p {
+.card-tras .card-conteudo p {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-bottom: 20px;
@@ -716,7 +696,7 @@ a {
 }
 
 
-.card-glow {
+.card-brilho{
     position: absolute;
     top: 0;
     left: 0;
@@ -731,14 +711,14 @@ a {
     transition: opacity 0.3s ease;
 }
 
-.memory-card:hover .card-glow {
+.card:hover .card-brilho {
     opacity: 1;
 }
 
 /* Carousel Controls */
 .carousel-controls {
     position: absolute;
-    bottom: -50px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -800,19 +780,15 @@ footer {
         --carousel-radius: 300px;
     }
 
-    .title {
-        font-size: 1.8rem;
-    }
-
-    .carousel-container {
+    .area-carrossel {
         height: 400px;
     }
 
-    .memory-card h3 {
+    .card h3 {
         font-size: 1.2rem;
     }
 
-    .memory-image {
+    .card-img{
         height: 120px;
     }
 }
@@ -824,11 +800,7 @@ footer {
         --carousel-radius: 250px;
     }
 
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .carousel-container {
+    .area-carrossel {
         height: 350px;
     }
 }

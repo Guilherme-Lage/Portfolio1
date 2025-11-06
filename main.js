@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
         // Elements
         const carousel = document.getElementById("memory-carousel");
-        const cards = document.querySelectorAll(".memory-card");
+        const cards = document.querySelectorAll(".card");
         const prevBtn = document.getElementById("prev-btn");
         const nextBtn = document.getElementById("next-btn");
 
