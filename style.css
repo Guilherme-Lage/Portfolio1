@@ -15,6 +15,7 @@
 --accent: #ed630c;
 }
 
+
 body {
     background-color: var(--background);
     color: var(--branco);
@@ -370,7 +371,7 @@ a {
 
 #habilidades {
     padding-top: 5%;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     background-color: var(--background);
 }
@@ -386,9 +387,9 @@ a {
 }
 
 .conteudo-habilidade {
-    overflow: hidden;
+  
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     flex-direction: column;
     gap: 15%;
@@ -396,13 +397,9 @@ a {
     vertical-align: center;
     border-radius: 15px;
     margin-top: 1%;
-
     background: rgba(67, 65, 65, 0.1);
-    /* Cor de fundo transparente */
     backdrop-filter: blur(10px);
-    /* Efeito de desfoque no fundo */
     border-radius: 10px;
-    /* Borda arredondada */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 3%;
 
@@ -508,6 +505,13 @@ a {
     align-items: center;
     position: relative;
 }
+#Projeto-conteudo{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
 
 /* CARROSEL */
 :root {
@@ -802,5 +806,12 @@ footer {
 
     .area-carrossel {
         height: 350px;
+    }
+}
+
+
+@media (max-width: 1700px){
+    .conteudo-habilidade{
+        height: 50vh;
     }
 }
