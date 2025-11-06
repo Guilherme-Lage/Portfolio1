@@ -495,7 +495,7 @@ a {
 
 #Projetos {
     padding-top: 5%;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background-color: var(--background);
     background-color: var(--background);
@@ -641,7 +641,7 @@ a {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
