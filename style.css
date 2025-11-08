@@ -321,7 +321,10 @@ a {
     display: flex;
     position: relative;
 }
-
+#foto-sobremim img{
+    border-radius: 10px;
+    object-fit: cover;
+}
 .divisoria h1 {
     align-self: center;
 
@@ -364,10 +367,11 @@ a {
 }
 
 #foto-sobremim {
-    background-color: gray;
+    border-radius: 0px;
     width: 40%;
     height: 70vh;
 }
+
 
 #txt-sobremim {
     align-content: center;
@@ -894,6 +898,7 @@ button {
 button:hover {
     transform: scale(1.02);
 }
+
 #Modal {
     display: none;
     position: fixed;
@@ -1292,9 +1297,10 @@ button:hover {
     .linguagem {
         font-size: 0.6rem;
     }
-    #area-linguagem{
+
+    #area-linguagem {
         width: 100%;
-     }
+    }
 
     button {
         width: 100%;
@@ -1349,6 +1355,14 @@ header nav.nav-links a:hover {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1001;
+}
+
+#verProjeto {
+    background-color: var(--background);
+    padding: 2%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
 }
 
 .menu-icon .bar {
