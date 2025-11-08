@@ -8,11 +8,13 @@
 
 :root {
 
-   --branco: #ecebef;
---background: #020d0c;
---cor-primaria: #f5c000;;
---cor-segundaria: #f5c000;;
---accent: #ed630c;
+    --branco: #ecebef;
+    --background: #020d0c;
+    --cor-primaria: #f5c000;
+    ;
+    --cor-segundaria: #f5c000;
+    ;
+    --accent: #ed630c;
 }
 
 
@@ -293,6 +295,8 @@ a {
     }
 }
 
+
+
 #sobremim {
     height: 100vh;
     width: 100%;
@@ -387,7 +391,7 @@ a {
 }
 
 .conteudo-habilidade {
-  
+
     width: 100%;
     height: 25vh;
     display: flex;
@@ -505,7 +509,8 @@ a {
     align-items: center;
     position: relative;
 }
-#Projeto-conteudo{
+
+#Projeto-conteudo {
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -574,7 +579,7 @@ a {
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover .card-interno{
+.card:hover .card-interno {
     transform: translateZ(20px);
 }
 
@@ -601,7 +606,7 @@ a {
     transform-style: preserve-3d;
 }
 
-.card-tras{
+.card-tras {
     background: linear-gradient(135deg,
             var(--accent),
             rgba(30, 30, 60, 0.8));
@@ -617,7 +622,7 @@ a {
     position: relative;
 }
 
-.tecnologia{
+.tecnologia {
     font-size: 0.8rem;
     color: var(--branco);
     margin-bottom: 10px;
@@ -684,7 +689,7 @@ a {
     }
 }
 
-.resumo{
+.resumo {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin-bottom: 15px;
@@ -700,7 +705,7 @@ a {
 }
 
 
-.card-brilho{
+.card-brilho {
     position: absolute;
     top: 0;
     left: 0;
@@ -792,7 +797,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    .card-img{
+    .card-img {
         height: 120px;
     }
 }
@@ -810,8 +815,232 @@ footer {
 }
 
 
-@media (max-width: 1700px){
-    .conteudo-habilidade{
+@media (max-width: 1700px) {
+    .conteudo-habilidade {
         height: 50vh;
+    }
+}
+
+
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    gap: 5%;
+
+}
+
+.contact-section {
+    width: 100%;
+    max-width: 600px;
+    padding-top: 4%;
+    position: relative;
+    /* Para o posicionamento da div de fundo */
+    z-index: 2;
+}
+
+.background-effect {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    background-color: var(--accent);
+    filter: blur(10px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.contact-container {
+
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    color: #fff;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #3498db;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+#Modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    /* Garante que o modal fique acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque no fundo */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background: rgba(255, 255, 255, 0.2);
+    /* Fundo translúcido */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    /* Desfoque no conteúdo do modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra para dar o efeito de profundidade */
+}
+
+#Modal .fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+#Modal .fechar:hover {
+    color: #000;
+}
+
+/* Efeito de animação para o modal */
+.modal-conteudo {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 1rem;
+}
+
+/* Menu hambúrguer */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--branco);
+    border-radius: 2px;
+}
+
+/* Estilo do menu para telas pequenas */
+@media (max-width: 768px) {
+
+    /* Esconde as links de navegação por padrão */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        background-color: var(--background);
+        width: 100%;
+        height: 40vh;
+        padding-top: 80px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    /* Exibe o menu hambúrguer */
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
     }
 }
