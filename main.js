@@ -208,3 +208,23 @@ menuIcon.addEventListener("click", () => {
     // Alterna a classe 'active' para mostrar ou esconder o menu
     navLinks.classList.toggle("active");
 });
+
+const themeToggleButton = document.getElementById("theme-toggle");
+const sunIcon = document.getElementById("sun-icon");
+const moonIcon = document.getElementById("moon-icon");
+
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("darkmode");
+}
+
+themeToggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("darkmode");
+
+
+    if (document.body.classList.contains("darkmode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
