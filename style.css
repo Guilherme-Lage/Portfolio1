@@ -608,17 +608,17 @@ a {
 }
 
 .card-frente {
-       background: linear-gradient(135deg,
+    background: linear-gradient(135deg,
             var(--accent),
-           var(--cor-segundaria));
+            var(--cor-segundaria));
     border: 1px solid rgba(157, 0, 255, 0.3);
     transform-style: preserve-3d;
 }
 
 .card-tras {
-     background: linear-gradient(135deg,
+    background: linear-gradient(135deg,
             var(--accent),
-           var(--cor-segundaria));
+            var(--cor-segundaria));
     border: 1px solid rgba(0, 229, 255, 0.3);
     transform: rotateY(180deg);
 }
@@ -885,7 +885,7 @@ button {
     border: none;
     border-radius: 8px;
     background-color: var(--background);
-    color: #fff;
+    color: var(--branco);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.5s;
@@ -894,7 +894,6 @@ button {
 button:hover {
     transform: scale(1.02);
 }
-
 #Modal {
     display: none;
     position: fixed;
@@ -1293,10 +1292,20 @@ button:hover {
     .linguagem {
         font-size: 0.6rem;
     }
+    #area-linguagem{
+        width: 100%;
+     }
 
     button {
         width: 100%;
     }
+
+
+    #theme-toggle {
+        margin-top: 2%;
+        width: 20%;
+    }
+
 }
 
 header nav.nav-links {
@@ -1357,7 +1366,6 @@ header nav.nav-links a:hover {
         justify-content: flex-start;
         padding: 0 20px;
         height: 60px;
-        /* mantém altura visível */
     }
 
     .menu-icon {
@@ -1409,6 +1417,7 @@ header nav.nav-links a:hover {
 }
 
 #theme-toggle {
+    position: fixed;
     top: 0px;
     left: 0px;
     background-color: transparent;
