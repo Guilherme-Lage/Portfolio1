@@ -321,10 +321,12 @@ a {
     display: flex;
     position: relative;
 }
-#foto-sobremim img{
+
+#foto-sobremim img {
     border-radius: 9px;
     object-fit: cover;
 }
+
 .divisoria h1 {
     align-self: center;
 
@@ -1277,6 +1279,8 @@ button:hover {
         font-size: 1rem;
     }
 
+ 
+
     .divisoria h2 {
         font-size: 3rem;
     }
@@ -1287,6 +1291,7 @@ button:hover {
 
     #habilidades {
         padding-bottom: 15%;
+         height: auto;
     }
 
     .conteudo-habilidade {
