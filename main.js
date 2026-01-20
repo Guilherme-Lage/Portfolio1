@@ -178,27 +178,7 @@ var modal = document.getElementById("Modal");
 var span = document.getElementsByClassName("fechar")[0];
 
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
 
-  event.preventDefault();
-
-  modal.style.display = "flex";
-
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-
-  document.getElementById("contact-form").reset();
-});
 
 const menuIcon = document.getElementById("menu-icon");
 const navLinks = document.getElementById("nav-links");
